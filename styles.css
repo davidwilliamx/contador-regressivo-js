@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Slabo+13px&family=Ultra&display=swap');
+
+:root {
+    --title-font: 'Ultra', serif;
+    --text-font: 'Slabo 13px', serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--text-font);
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 100vh;
+    margin-left: 50px;
+    background: linear-gradient(129deg, #ffffeb, #b8a088);
+    background-size: 400% 400%;
+    -webkit-animation: bodyBg 21s ease infinite;
+    -moz-animation: bodyBg 21s ease infinite;
+    animation: bodyBg 21s ease infinite;
+}
+@-webkit-keyframes bodyBg {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes bodyBg {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes bodyBg {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+header {
+    margin: 20px 0 45px 0;
+}
+header img {
+    width: 100px;
+    height: 54px;
+}
+.title {
+    font-family: var(--title-font);
+    font-size: 48px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+.text {
+    font-family: var(--text-font);
+    font-size: 24px;
+    margin-bottom: 66px;
+}
+#clock {
+    display: flex;
+    justify-content: flex-start;
+    gap: 49px;
+    margin-bottom: 32px;
+}
+#clock span {
+    font-family: var(--title-font);
+    font-size: 64px;
+}
+#clock p {
+    font-size: 20px;
+}
+.btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    cursor: pointer;
+}
+.btn:hover span {
+    transition: all .1s ease-in-out .1s;
+    margin-left: 15px;
+}
+footer {
+    margin-top: 150px;
+}
+.social {
+    display: flex;
+    gap: 65px;
+}
