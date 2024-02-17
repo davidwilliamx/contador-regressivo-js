@@ -3,6 +3,7 @@
 :root {
     --title-font: 'Ultra', serif;
     --text-font: 'Slabo 13px', serif;
+    font-size: 16px;
 }
 * {
     padding: 0;
@@ -11,12 +12,6 @@
     font-family: var(--text-font);
 }
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    height: 100vh;
-    margin-left: 50px;
     background: linear-gradient(129deg, #ffffeb, #b8a088);
     background-size: 400% 400%;
     -webkit-animation: bodyBg 21s ease infinite;
@@ -38,6 +33,12 @@ body {
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0 10px;
+}
 header {
     margin: 20px 0 45px 0;
 }
@@ -47,27 +48,27 @@ header img {
 }
 .title {
     font-family: var(--title-font);
-    font-size: 48px;
+    font-size: 2.5rem;
     text-transform: uppercase;
     margin-bottom: 12px;
 }
 .text {
+    width: 100%;
     font-family: var(--text-font);
-    font-size: 24px;
-    margin-bottom: 66px;
+    font-size: 1rem;
 }
 #clock {
     display: flex;
     justify-content: flex-start;
-    gap: 49px;
-    margin-bottom: 32px;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 #clock span {
     font-family: var(--title-font);
-    font-size: 64px;
+    font-size: 4rem;
 }
 #clock p {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 .btn {
     display: flex;
@@ -75,17 +76,38 @@ header img {
     align-items: center;
     border: none;
     background: transparent;
-    font-size: 24px;
+    font-size: 1.25rem;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 .btn:hover span {
     transition: all .1s ease-in-out .1s;
     margin-left: 15px;
 }
 footer {
-    margin-top: 150px;
+    position: fixed;
+    bottom: 50px;
 }
 .social {
     display: flex;
-    gap: 65px;
+    gap: 20px;
+}
+
+@media (min-width: 425px) {
+    .title {
+        font-size: 3rem;
+        margin-bottom: 30px;
+    }
+    .text {
+        font-size: 1.25rem;
+        margin-bottom: 30px;
+    }
+    #clock {
+        margin-bottom: 30px;
+    }
+}
+@media (min-width: 1200px) {
+    .title {
+        font-size: 4rem;
+    }
 }

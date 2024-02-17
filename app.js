@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const segundosElement = document.getElementById('segundos');
 
     let tempo = 24;
-    let tempoTotal = tempo * 3600; // 1 hora em segundos
+    let tempoTotal = Math.floor(tempo * 3600); // 1 hora em segundos
 
     const atualizarContador = () => {
         let horas = Math.floor(tempoTotal / 3600);
